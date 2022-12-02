@@ -7,26 +7,99 @@ body {
 }
 
 .buttom {
-  width: 480px;
-  height: 580px;
+  width:550px;
+  height:490px;
   border-radius:10px;
+  display:flex;
+  justify-content:center;
+  margin-top:15px;
+  margin-left : 30px;
   position: absolute;
-  margin-left:50%;
-  
-  
+}
+#first{
+  margin-top:18px;
+  width: 510px;
+  height: 130px;
+  margin-bottom:5px;
+}
 
-/* On screens that are 992px wide or less, the background color is blue */
-@media screen and (max-width: 500px) {
+/* Create four equal columns that floats next to each other */
+.column {
+  float: left;
+  margin-top:5px;
+  margin-right:3.5px;
+  margin-left:3.5px;
+  margin-bottom:5px;
+  width: 31.9%;
+  padding-bottom: 65px;
+}
+.column2 {
+  float: left;
+  margin-top:3px;
+  margin-right:5px;
+  margin-left:5px;
+  width: 23%;
+  padding-bottom: 65px;
+}
+
+/* Clear floats after the columns */
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
   
-  
+@media screen and (max-width:480px) {
+  .buttom{
+    width: 350px;
+    height: 480px;
+  }
+  #first{
+    width: 320px;
+    height: 120px;
+    margin-bottom:6px;
+  }
+  .column {
+    width: 100%;
+    height: 30px;
+    margin-bottom:0px;
+    margin-right:3px;
+    margin-left:0px;
+  }
+  .column2 {
+    width: 45.9%;
+    height: 20px;
+
+    margin-top:10px;
+    margin-right:7px;
+    margin-left:6px;
+    margin-bottom:-3px;
+    padding-bottom: 50px;
   }
 }
 
+* {
+  box-sizing: border-box;
 }
+
 </style>
 </head>
+
 <body>
 <div class="buttom" style="background-color:white;">
+  
+  <div class="row">
+    <div id="first" style="background-color:#a6d900;"></div>
+    <div class="column" style="background-color:#00CACA;"><br/><br/><br/><br/><br/><br/><br/></div>
+    <div class="column" style="background-color:#00CACA;"><br/><br/><br/><br/><br/><br/><br/></div>
+    <div class="column" style="background-color:#00CACA;"><br/><br/><br/><br/><br/><br/><br/></div>
+
+    <div class="column2" style="background-color:#F0F0F0;"><br/><br/><br/></div>
+    <div class="column2" style="background-color:#F0F0F0;"><br/><br/><br/></div>
+    <div class="column2" style="background-color:#F0F0F0;"><br/><br/><br/></div>
+    <div class="column2" style="background-color:#F0F0F0;"><br/><br/><br/></div>
+  </div>
+</div>
 </body>
 
 </html>
